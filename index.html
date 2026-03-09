@@ -1,7 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciro Listone - Phd Student</title>
+    <style>
+        /* Stili di base per un look pulito e accademico */
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fafafa; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h1, h2, h3 { color: #2c3e50; }
+        
+        /* Sezione Intestazione e Bio */
+        header { display: flex; align-items: center; gap: 30px; margin-bottom: 40px; border-bottom: 2px solid #eee; padding-bottom: 30px; }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid #2980b9; }
+        .header-text h1 { margin: 0; font-size: 2.5em; }
+        .header-text h2 { margin: 5px 0 15px; font-size: 1.2em; font-weight: normal; color: #7f8c8d; }
+        .social-links a { margin-right: 15px; color: #2980b9; text-decoration: none; font-weight: bold; }
+        .social-links a:hover { text-decoration: underline; }
+
+        /* Sezione Pubblicazioni */
+        .publication { border-left: 4px solid #2980b9; background: #fdfdfd; padding: 15px 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .pub-title { font-size: 1.1em; font-weight: bold; color: #2c3e50; margin: 0 0 5px 0; }
+        .pub-authors { font-style: italic; color: #555; margin: 0 0 10px 0; font-size: 0.95em; }
+        .pub-venue { font-weight: bold; color: #7f8c8d; font-size: 0.9em; margin-bottom: 10px;}
+        
+        /* Pulsanti e Abstract */
+        .pub-actions { margin-top: 15px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        .btn-scholar { background-color: #2980b9; color: white; padding: 6px 12px; text-decoration: none; border-radius: 5px; font-size: 0.85em; transition: 0.2s; }
+        .btn-scholar:hover { background-color: #1c5980; }
+        
+        details { width: 100%; margin-top: 10px; font-size: 0.95em; color: #444; background: #f0f4f8; padding: 10px; border-radius: 5px; }
+        summary { cursor: pointer; font-weight: bold; color: #2980b9; outline: none; }
+        summary:hover { color: #1c5980; }
+        .abstract-text { margin-top: 10px; text-align: justify; }
+
+        /* Responsive per smartphone */
+        @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; }
+            .container { margin: 20px; padding: 20px; }
+        }
+    </style>
+</head>
 <body>
-  <h1>Ciao, sono [Tuo Nome]!</h1>
-  <p>Benvenuti nel mio sito ospitato su GitHub Pages.</p>
+
+<div class="container">
+    <header>
+        <img src="https://via.placeholder.com/160" alt="Foto Profilo" class="profile-img">
+        <div class="header-text">
+            <h1>Ciro Listone</h1>
+            <h2>PhD Student in Computational Intelligence, University of Naples Federico II</h2>
+            <div class="social-links">
+                <a href="mailto:ciro.listone@unina.it">Email</a>
+                <a href="LINK_AL_TUO_GOOGLE_SCHOLAR" target="https://scholar.google.com/citations?user=q00QAygAAAAJ">Google Scholar</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h3>About Me</h3>
+        <p>
+            I hold a B.Sc. in Computer Engineering and an M.Sc. in Computer Science from the University of Naples Federico II, where I am currently a Ph.D. Student in Computational Intelligence.
+        </p>
+        <p>
+            My Ph.D. research focuses on <strong>neurosymbolic and explainable approaches in medicine</strong>, aiming to bridge formal reasoning and machine learning for trustworthy AI systems. I am passionate about <strong>Computer Vision</strong> and <strong>Machine Learning</strong>, and I am currently deepening my studies in <strong>Formal Logics</strong>.
+        </p>
+        <p>
+            I am a member of the <strong>ASTREA Lab</strong>, supervised by <strong>Prof. Aniello Murano</strong>, Vice President of AIxIA, EurAI Fellow, and AAIA Fellow.
+        </p>
+    </section>
+
+    <section>
+        <h3>Pubblicazioni Selezionate</h3>
+
+        <div class="publication">
+            <p class="pub-title">ADNF-Clustering: An Adaptive and Dynamic Neuro-Fuzzy Clustering for Leukemia Prediction</p>
+            <p class="pub-authors">Marco Aruta, Ciro Listone, Giuseppe Murano, Aniello Murano</p>
+            <p class="pub-venue">IEEE International Conference on E-health Networking, Application & Services (Healthcom), 2025</p>
+            
+            <div class="pub-actions">
+                <a href="LINK_AL_PAPER_SU_SCHOLAR_O_RIVISTA" target="https://ieeexplore.ieee.org/abstract/document/11343730" class="btn-scholar">Article Here</a>
+                
+                <details>
+                    <summary>Abstract</summary>
+                    <div class="abstract-text">
+                        Leukemia diagnosis and monitoring rely increasingly on high-throughput image data, yet conventional clustering methods lack the flexibility to accommodate evolving cellular patterns and quantify uncertainty in real time. We introduce Adaptive and Dynamic Neuro–Fuzzy Clustering, a novel streaming-capable framework that marries Convolutional Neural Network based feature extraction with an online fuzzy clustering engine. ADNF initializes soft partitions via Fuzzy C-Means, then continuously updates micro-cluster centers, densities, and fuzziness parameters using a Fuzzy Temporal Index (FTI) that measures entropy evolution. A topology-refinement stage per-forms density-weighted merging and entropy-guided splitting to guard against over (and under) segmentation. On the C-NMC leukemia microscopy dataset, our tool achieves a silhouette score of 0.51, demonstrating superior cohesion and separation over static baselines. The method’s adaptive uncertainty modeling and label-free operation hold immediate potential for integration within the INFANT pediatric oncology network, enabling scalable, up-to-date support for personalized leukemia management.
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="publication">
+            <p class="pub-title">Bone Segmentation in Low-Field Knee MRI Using a Three-Dimensional Convolutional Neural Network</p>
+            <p class="pub-authors">Ciro Listone, Diego Romano, Marco Lapegna</p>
+            <p class="pub-venue">Big Data and Cognitive Computing, 2025</p>
+            
+            <div class="pub-actions">
+                <a href="LINK_AL_PAPER_SU_SCHOLAR_O_RIVISTA" target="https://www.mdpi.com/2504-2289/9/6/146" class="btn-scholar">Article Here</a>
+                
+                <details>
+                    <summary>Leggi Abstract</summary>
+                    <div class="abstract-text">
+                        Bone segmentation in magnetic resonance imaging (MRI) is crucial for clinical and research applications, including diagnosis, surgical planning, and treatment monitoring. However, it remains challenging due to anatomical variability and complex bone morphology. Manual segmentation is time-consuming and operator-dependent, fostering interest in automated methods. This study proposes an automated segmentation method based on a 3D U-Net convolutional neural network to segment the femur, tibia, and patella from low-field MRI scans. Low-field MRI offers advantages in cost, patient comfort, and accessibility but presents challenges related to lower signal quality. Our method achieved a Dice Similarity Coefficient (DSC) of 0.9838, Intersection over Union (IoU) of 0.9682, and Average Hausdorff Distance (AHD) of 0.0223, with an inference time of approximately 3.96 s per volume on a GPU. Although post-processing had minimal impact on metrics, it significantly enhanced the visual smoothness of bone surfaces, which is crucial for clinical use. The final segmentations enabled the creation of clean, 3D-printable bone models, beneficial for preoperative planning. These results demonstrate that the model achieves accurate segmentation with a high degree of overlap compared to manually segmented reference data. This accuracy results from meticulous fine-tuning of the network, along with the application of advanced data augmentation and post-processing techniques.
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </section>
+</div>
+
 </body>
 </html>
